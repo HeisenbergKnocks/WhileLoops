@@ -1,4 +1,4 @@
-* Name:
+/* Name:
  * Section: 
  */
 
@@ -62,12 +62,18 @@ public class LoopsLab extends Applet
 
 		i = 0;
 		while(i < 100) {
-			int d = (int) (Math.random() * (200+1));
 			
 			//x and y values for the circle
+			int d = (int) (Math.random() * (200+1));
 			
-			int xc = (int) (Math.random() * (199+1));
-			int yc = 301 + (int) (Math.random() * (99+1));
+			int xc = (int) (Math.random() * (399+1));
+			int yc = 301 + (int) (Math.random() * (299+1));
+			
+			if(400 - xc < d){
+				xc = (int) (Math.random() * (400 - d));
+			}
+			
+			
 			
 			int r = (int) (Math.random() * (255+1));
 			int gr = (int) (Math.random() * (255+1));
