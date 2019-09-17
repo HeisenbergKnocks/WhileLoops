@@ -1,5 +1,4 @@
-/**
- * Name:
+* Name:
  * Section: 
  */
 
@@ -45,8 +44,8 @@ public class LoopsLab extends Applet
 			//x and y values for endpoints
 			int w = 50;
 			
-			int x = 400 + (int) (Math.random() * (400));
-			int y = (int) (Math.random() * (300));
+			int xs = 401 + (int) (Math.random() * (350));
+			int ys = (int) (Math.random() * (249));
 			
 			int r = (int) (Math.random() * (255));
 			int gr = (int) (Math.random() * (255));
@@ -56,14 +55,35 @@ public class LoopsLab extends Applet
 			g.setColor(new Color(r, gr, b));
 			
 			//draw squares
-			g.fillRect(x, y, w, w);
+			g.fillRect(xs, ys, w, w);
 			
 			i++;
 		}
 
+		i = 0;
+		while(i < 100) {
+			int d = (int) (Math.random() * (200+1));
 			
+			//x and y values for the circle
+			
+			int xc = (int) (Math.random() * (199+1));
+			int yc = 301 + (int) (Math.random() * (99+1));
+			
+			int r = (int) (Math.random() * (255+1));
+			int gr = (int) (Math.random() * (255+1));
+			int b = (int) (Math.random() * (255+1));
+			
+			
+			//colors
+			g.setColor(new Color(r, gr, b));
+			
+			//draw circles
+			g.drawOval(xc, yc, d, d);
+			
+			i++;
+			
+		}
 		
 	}
 
 }
-
